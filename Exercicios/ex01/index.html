@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="info">
+        <h1>O que é IMC?</h1>
+
+        <p>
+            Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.
+        </p>
+        <p>
+            Para fazer o cálculo, basta dividir o peso pela altura ao quadrado. O número final representa o quanto a pessoa tem de massa muscular + massa de gordura + massa óssea. Com o resultado, o próximo passo é interpretá-lo.
+        </p>
+
+        <h2>IMC - Classificação</h2>
+
+        <p>
+            Menor que 16 - Magreza grave <br>
+            16 a menor que 17 - Magreza moderada <br>
+            17 a menor que 18,5 - Magreza leve <br>
+            18,5 a menor que 25 - Saudável <br>
+            25 a menor que 30 - Sobrepeso <br>
+            30 a menor que 35 - Obesidade Grau I <br>
+            35 a menor que 40 - Obesidade Grau II (considerada severa) <br>
+            Maior que 40 - Obesidade Grau III (considerada mórbida) 
+        </p>
+
+        <p>
+            Quando o índice de massa corporal recomendado está excedido, é porque a pessoa pode estar numa situação de sobrepeso com tendência à obesidade ou já ter a obesidade. Portanto, o calculo pode ser feito em casa, mas, dependendo do resultado, é importante procurar um médico para avaliar o grau de sobrepeso ou obesidade. Ou o extremo oposto disso. Se o índice estiver muito abaixo da normalidade para o homem e para a mulher indica que a pessoa pode estar no estado de desnutrição, de perda expressiva de massa. E assim como a obesidade, também existem graus de magreza.
+        </p>
+    </div>
+
+    <div class="calculadora-imc">
+        <h3>Calcule seu IMC aqui</h3>
+            <label>Altura</label>
+            <input type="number" id="campoAltura" placeholder="Informe sua altura">
+
+            <label>Peso</label>
+            <input type="number" id="campoPeso" placeholder="Informe seu peso">
+            <button onclick="calcular()">Calcular</button><br><br>
+            <span id="res"></span>
+    </div>
+
+    <div id="classificacao">
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>Classificação</th>
+                <th>Obesidade (grau)</th>
+            </tr>
+            <tr class="magreza">
+                <td>Menor que 18,5</td>
+                <td>Magreza</td>
+                <td>0</td>
+            </tr>
+            <tr class="normal">
+                <td>Entre 18,5 e 24,9</td>
+                <td>Normal</td>
+                <td>0</td>
+            </tr>
+            <tr class="sobrepeso">
+                <td>Entre 25 e 29,9</td>
+                <td>Sobrepeso</td>
+                <td>I</td>
+            </tr>
+            <tr class="obesidade">
+                <td>Entre 30 e 39,9</td>
+                <td>Obesidade</td>
+                <td>II</td>
+            </tr>
+            <tr class="obesidade-severa">
+                <td>Maior que 40</td>
+                <td>Obesidade grave</td>
+                <td>III</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
